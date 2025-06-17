@@ -1,9 +1,13 @@
-import React from 'react'
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import React from 'react';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-const Dashboard = () => {
+interface DashboardProps {
+  setActiveSection: (section: string) => void;
+}
+
+const Dashboard = ({ setActiveSection }: DashboardProps) => {
   const stats = [
     {
       label: 'Total Paritta',
@@ -52,6 +56,10 @@ const Dashboard = () => {
     },
   ]
 
+  const handleNavigateToSection = (section: string) => {
+    setActiveSection(section);
+  }
+
   return (
     <ScrollView className="py-12 bg-gray-50">
       <View className="max-w-7xl mx-auto px-4">
@@ -93,19 +101,28 @@ const Dashboard = () => {
         <View className="bg-white rounded-lg shadow-lg p-8">
           <Text className="text-2xl font-bold text-gray-900 mb-6 text-center">Mulai Praktik Hari Ini</Text>
           <View className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <TouchableOpacity className="bg-orange-500 p-4 rounded-lg">
+            <TouchableOpacity 
+              className="bg-orange-500 p-4 rounded-lg"
+              onPress={() => handleNavigateToSection('PujaPagi')}
+            >
               <View className="flex-row items-center justify-center">
                 <FontAwesome5 name="sun" size={20} color="#fff" />
                 <Text className="text-white ml-2">Puja Pagi</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity className="bg-purple-500 p-4 rounded-lg">
+            <TouchableOpacity 
+              className="bg-purple-500 p-4 rounded-lg"
+              onPress={() => handleNavigateToSection('PujaSore')}
+            >
               <View className="flex-row items-center justify-center">
                 <FontAwesome5 name="cloud-sun" size={20} color="#fff" />
                 <Text className="text-white ml-2">Puja Sore</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity className="bg-blue-500 p-4 rounded-lg">
+            <TouchableOpacity 
+              className="bg-blue-500 p-4 rounded-lg"
+              onPress={() => handleNavigateToSection('Meditasi')}
+            >
               <View className="flex-row items-center justify-center">
                 <Text className="text-white mr-2">🧘‍♂️</Text>
                 <Text className="text-white">Meditasi</Text>
