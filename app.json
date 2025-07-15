@@ -4,7 +4,7 @@
     "slug": "buddhayana-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/Logo-sangha-agung-indonesia.jpg",
+    "icon": "./assets/images/buddhayana.png",
     "scheme": "buddhayana-app",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -16,7 +16,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/Logo-sangha-agung-indonesia.jpg",
+        "foregroundImage": "./assets/images/buddhayana-app.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
@@ -26,14 +26,14 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/Logo-sangha-agung-indonesia.jpg"
+      "favicon": "./assets/images/buddhayana.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/Logo-sangha-agung-indonesia.jpg",
+          "image": "./assets/images/buddhayana-app.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"

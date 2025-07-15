@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Animated, Dimensions, Modal, Text, TouchableOpacity, View } from 'react-native';
+import { Animated, Dimensions, Modal, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const { width } = Dimensions.get('window');
@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({
     activeSection, 
     isMobileMenuOpen, 
     setIsMobileMenuOpen,
-    setActiveSection // Destructure prop baru
+    setActiveSection
 }) => {
     const slideAnim = useRef(new Animated.Value(SIDEBAR_WIDTH)).current;
     const opacityAnim = useRef(new Animated.Value(0)).current;
@@ -28,10 +28,8 @@ const Navbar: React.FC<NavbarProps> = ({
         { id: 'Meditasi', label: 'Meditasi', icon: 'heart' }
     ];
 
-    // Animasi slide dari kanan ke kiri (buka dan tutup)
     useEffect(() => {
         if (isMobileMenuOpen) {
-            // Animasi buka - slide masuk dari kanan
             Animated.parallel([
                 Animated.timing(slideAnim, {
                     toValue: 0,
@@ -45,7 +43,6 @@ const Navbar: React.FC<NavbarProps> = ({
                 })
             ]).start();
         } else {
-            // Animasi tutup - slide keluar ke kanan
             Animated.parallel([
                 Animated.timing(slideAnim, {
                     toValue: SIDEBAR_WIDTH,
@@ -62,18 +59,18 @@ const Navbar: React.FC<NavbarProps> = ({
     }, [isMobileMenuOpen, slideAnim, opacityAnim]);
 
     const handleMenuItemPress = (sectionId: string) => {
-        // Ganti active section
         setActiveSection(sectionId);
-        
-        // Tutup sidebar setelah memilih
         setIsMobileMenuOpen(false);
     };
 
     return (
         <>
-            {/* Header dengan hamburger menu */}
-            <View className="bg-white shadow-lg">
-                <View className="flex-row items-center justify-between px-4 py-4 mt-7">
+            {/* Status Bar Configuration */}
+            <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
+            
+            {/* Header dengan styling normal - Fixed positioning */}
+            <View className="bg-white shadow-lg" style={{ paddingTop: StatusBar.currentHeight || 44 }}>
+                <View className="flex-row items-center justify-between px-4 py-3">
                     {/* Logo */}
                     <View className="flex-row items-center">
                         <MaterialCommunityIcons name="dharmachakra" size={28} color="#ea580c" />
@@ -84,6 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     <TouchableOpacity
                         onPress={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="p-2"
+                        activeOpacity={0.7}
                     >
                         <MaterialCommunityIcons 
                             name={isMobileMenuOpen ? 'close' : 'menu'} 
@@ -103,13 +101,15 @@ const Navbar: React.FC<NavbarProps> = ({
                 statusBarTranslucent={true}
             >
                 <View className="flex-1">
-                    {/* Overlay dengan fade animation */}
+                    {/* Overlay */}
                     <Animated.View 
                         className="flex-1 bg-black"
-                        style={{ opacity: opacityAnim.interpolate({
-                            inputRange: [0, 1],
-                            outputRange: [0, 0.5]
-                        }) }}
+                        style={{ 
+                            opacity: opacityAnim.interpolate({
+                                inputRange: [0, 1],
+                                outputRange: [0, 0.5]
+                            })
+                        }}
                     >
                         <TouchableOpacity
                             className="flex-1"
@@ -123,12 +123,13 @@ const Navbar: React.FC<NavbarProps> = ({
                         className="bg-white border-l border-gray-200 absolute right-0 top-0 bottom-0"
                         style={{
                             width: SIDEBAR_WIDTH,
-                            transform: [{ translateX: slideAnim }]
+                            transform: [{ translateX: slideAnim }],
+                            paddingTop: StatusBar.currentHeight || 44
                         }}
                     >
                         {/* Sidebar Header */}
                         <View className="flex-row items-center justify-between px-4 py-6 border-b border-gray-200">
-                            <View className="flex-row items-center mt-7">
+                            <View className="flex-row items-center">
                                 <MaterialCommunityIcons name="dharmachakra" size={24} color="#ea580c" />
                                 <Text className="text-lg font-bold text-gray-800 ml-2">Buddhayana Digital</Text>
                             </View>
@@ -168,7 +169,7 @@ const Navbar: React.FC<NavbarProps> = ({
                             ))}
                         </View>
 
-                        {/* Info section - opsional */}
+                        {/* Info section */}
                         <View className="absolute bottom-8 left-0 right-0 px-4">
                             <View className="bg-orange-50 rounded-lg p-3">
                                 <Text className="text-orange-800 text-sm text-center">

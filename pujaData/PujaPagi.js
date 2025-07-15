@@ -1,69 +1,64 @@
 export const PujaPagi = [
-    {
-        title: 'Namakāra Gāthā',
-        duration: '4:30',
-        description: 'Penghormatan kepada Tiratana (Buddha, Dhamma, Sangha)',
-        audioUrl: '#',
-        paliText: `Arahaṁ sammāsambuddho bhagavā
+        {
+                title: 'Namakāra Gāthā',
+                duration: '4:30',
+                description: 'Penghormatan kepada Tiratana (Buddha, Dhamma, Sangha)',
+                audioUrl: '#',
+                paliText: `Arahaṁ sammāsambuddho bhagavā
 Buddhaṁ bhagavantaṁ abhivādemi. (namakāra)
 
 Svākkhāto bhagavatā dhammo
-Dhammaṁ namassāmi.
-(namakāra)
+Dhammaṁ namassāmi. (namakāra)
 
 Supaṭipanno bhagavato sāvakasaṅgho
-Saṅghaṁ namāmi.
-(namakāra)`,
-        translation: `Sang Bhagavā, Yang Maha Suci, Yang telah mencapai penerangan sempurna;
-Aku bersujud di hadapan Sang Buddha, Sang Bhagavā.
-(namakāra)
+Saṅghaṁ namāmi. (namakāra)`,
+                translation: `Sang Bhagavā, Yang Maha Suci, Yang telah mencapai penerangan sempurna;
+Aku bersujud di hadapan Sang Buddha, Sang Bhagavā. (namakāra)
 
 Dhamma telah sempurna dibabarkan oleh Sang Bhagavā;
-Aku bersujud di hadapan Dhamma.
-(namakāra)
+Aku bersujud di hadapan Dhamma. (namakāra)
 
 Saṅgha Siswa Sang Bhagavā telah bertindak sempurna;
-Aku bersujud di hadapan Saṅgha.
-(namakāra)`
-    },
-    {
-        title: 'Pūja Gāthā',
-        duration: '3:15',
-        description: 'Persiapan puja dan penghormatan awal',
-        audioUrl: '#',
-        paliText: `Yamamha kho mayaṁ bhagavantaṁ saranaṁ
+Aku bersujud di hadapan Saṅgha. (namakāra)`
+        },
+        {
+                title: 'Pūja Gāthā',
+                duration: '3:15',
+                description: 'Persiapan puja dan penghormatan awal',
+                audioUrl: '#',
+                paliText: `Yamamha kho mayaṁ bhagavantaṁ saranaṁ
 gatā, (uddissa pabbajitā)¹
 , yo no bhagavā satthā,
 yassa ca mayaṁ bhagavato dhammaṁ rocema,
 imehi sakkārehi taṁ bhagavantaṁ sasadhammaṁ
 sasāvakasaṅghaṁ abhipūjayāma`,
-        translation: `Kami berlindung kepada Sang Bhagavā, (kami berlatih
+                translation: `Kami berlindung kepada Sang Bhagavā, (kami berlatih
 menjadi pabbajita karena), Sang Bhagavā guru agung kami,
 dan dalam Dhamma Sang Bhagavā kami berbahagia, dengan
 persembahan ini kami memuja Sang Bhagavā, Dhamma dan
 Saṅgha.`
-    },
-    {
-        title: 'Pūja Gāthā',
-        duration: '3:15',
-        description: 'Persiapan puja dan penghormatan awal',
-        audioUrl: '#',
-        paliText: `Handadāni mayantaṁ bhagavantaṁ vācāya
+        },
+        {
+                title: 'Vandana',
+                duration: '3:15',
+                description: 'Penghormatan',
+                audioUrl: '#',
+                paliText: `Handadāni mayantaṁ bhagavantaṁ vācāya
 abhithutuṁ pubbabhāganamakāraṁ karoma se
 
 Namo Sanghyang Ādi Buddhāya (3X)
 Namo Tassa Bhagavato Arahato Sammāsambuddhassa (3X)
 Namo Sabbe Bodhisattāya-Mahasattāya (3X)`,
-        translation: `Terpujilah Sanghyang Ādi Buddha, Tuhan Yang Maha Esa (3X)
+                translation: `Terpujilah Sanghyang Ādi Buddha, Tuhan Yang Maha Esa (3X)
 Terpujilah Sang Bhagavā, Yang Maha Suci, Yang telah mencapai Penerangan Sempurna (3X)
 Terpujilah para Bodhisatta - Mahasatta (3X)`
-    },
-    {
-        title: 'Buddhābhitthutiṁ',
-        duration: '5:20',
-        description: 'Pujian kepada Buddha',
-        audioUrl: '#',
-        paliText: `Yo so tathāgato arahaṁ sammāsambuddho,
+        },
+        {
+                title: 'Buddhābhitthutiṁ',
+                duration: '5:20',
+                description: 'Pujian kepada Buddha',
+                audioUrl: '#',
+                paliText: `Yo so tathāgato arahaṁ sammāsambuddho,
 vijjācaraṇasampanno sugato lokavidū, anuttaro
 purisadhammasārathi satthā devamanussānaṁ
 buddho bhagavā,
@@ -76,7 +71,7 @@ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ
 brahmacariyaṁ pakāsesi, tamahaṁ bhagavantaṁ
 abhipūjayāmi tamahaṁ bhagavantaṁ sirasā
 namāmi.`,
-        translation: `Beliau Sang Tathāgata, Yang Maha Suci, yang telah
+                translation: `Beliau Sang Tathāgata, Yang Maha Suci, yang telah
 mencapai penerangan sempurna, sempurna pengetahuan
 serta tindak tandukNya, sempurna menempuh Sang Jalan
 (ke Nibbāna), pengenal segenap alam, pembimbing manusia
@@ -89,29 +84,29 @@ indah di awal, indah di pertengahan, indah di akhir, dalam
 makna dan kata, dan menunjukkan kehidupan suci yang
 murni dan sempurna. Kepada Sang Bhagavā saya memuja,
 kepada Sang Bhagavā saya bersujud.`
-    },
-    {
-        title: 'Dhammābhitthutiṁ',
-        duration: '4:45',
-        description: 'Pujian kepada Dhamma',
-        audioUrl: '#',
-        paliText: `Handa mayaṁ Dhammābhithutiṁ karoma se
+        },
+        {
+                title: 'Dhammābhitthutiṁ',
+                duration: '4:45',
+                description: 'Pujian kepada Dhamma',
+                audioUrl: '#',
+                paliText: `Handa mayaṁ Dhammābhithutiṁ karoma se
 
 Yo so svākkhāto bhagavatā dhammo,
 sandiṭṭhiko akāliko ehipassiko, opanayiko
 paccattaṁ veditabbo viññūhi, tamahaṁ dhammaṁ
 abhipūjayāmi tamahaṁ dhammaṁ sirasā namāmi.`,
-        translation: `Demikianlah Dhamma telah sempurna dibabarkan oleh Sang Bhagavā, berada sangat dekat, tak lapuk oleh waktu,
+                translation: `Demikianlah Dhamma telah sempurna dibabarkan oleh Sang Bhagavā, berada sangat dekat, tak lapuk oleh waktu,
 mengundang untuk dibuktikan, menuntun ke dalam batin,
 dapat diselami oleh para bijaksana dalam batin masing-masing. Kepada Dhamma saya memuja, kepada Dhamma
 saya bersujud.`
-    },
-    {
-        title: 'Saṅghābhitthutiṁ',
-        duration: '4:45',
-        description: 'Pujian kepada Dhamma dan Sangha',
-        audioUrl: '#',
-        paliText: `Handa mayaṁ Saṅghābhithutiṁ karoma se
+        },
+        {
+                title: 'Saṅghābhitthutiṁ',
+                duration: '4:45',
+                description: 'Pujian kepada Dhamma dan Sangha',
+                audioUrl: '#',
+                paliText: `Handa mayaṁ Saṅghābhithutiṁ karoma se
 
 Yo so supaṭipanno bhagavato sāvakasaṅgho,
 Ujupaṭipanno bhagavato sāvakasaṅgho,
@@ -123,7 +118,7 @@ dakkhiṇeyyo, añjalikaraṇīyo, anuttaraṁ
 puññakkhetaṁ lokassa, tamahaṁ saṅghaṁ
 abhipūjayāmi tamahaṁ saṅghaṁ sirasā namāmi
 `,
-        translation: `Demikianlah Saṅgha Siswa Sang Bhagavā telah
+                translation: `Demikianlah Saṅgha Siswa Sang Bhagavā telah
 bertindak baik, Saṅgha Siswa Sang Bhagavā telah bertindak
 lurus, Saṅgha Siswa Sang Bhagavā telah bertindak benar,
 Saṅgha Siswa Sang Bhagavā telah bertindak patut. Mereka
@@ -133,13 +128,13 @@ menerima pemberian, tempat bernaung, persembahan serta
 penghormatan. Ladang kebajikan yang tiada taranya di
 alam semesta. Kepada Saṅgha saya memuja, kepada Saṅgha
 saya bersujud.`
-    },
-    {
-        title: 'Ratanattayappaṇāmagāthā',
-        duration: '6:10',
-        description: 'Syair pemujaan Tiratana dan penghilang ketakuhan',
-        audioUrl: '#',
-        paliText: `Handa mayaṁ ratanattayappaṇāmagāthāyo ceva saṁvegavatthuparidīpakapāṭhañca bhaṇāma se
+        },
+        {
+                title: 'Ratanattayappaṇāmagāthā',
+                duration: '6:10',
+                description: 'Syair pemujaan Tiratana dan penghilang ketakuhan',
+                audioUrl: '#',
+                paliText: `Handa mayaṁ ratanattayappaṇāmagāthāyo ceva saṁvegavatthuparidīpakapāṭhañca bhaṇāma se
 
 Buddho susuddho karuṇāmahaṇṇavo,
 Yoccantasuddhabbarañāṇalocano,
@@ -192,22 +187,22 @@ tassa bhagavato sāsanaṁ, yathāsati yathābalaṁ
 manasikaroma, anupaṭipajjāma, sā sā no paṭipatti,
 imassa kevalassa dukkhakkhandhassa antakiriyāya
 saṁvattatūti`,
-        translation: `Sang Buddha yang benar-benar murni pemilik kasih sayang seluas samudra,
+                translation: `Sang Buddha yang benar-benar murni pemilik kasih sayang seluas samudra,
 Pemilik mata kebijaksanaan murni yang tiada taranya, Penakluk kekotoran batin dan kejahatan di dunia, Aku memuja dengan penuh keyakinan kepada Buddha. Dhamma Sang Guru (Buddha) laksana pelita, Jalan menuju pembebasan, penghalau pertikaian, Mengantarkan pada kesucian dan pencerahan, Aku memuja dengan penuh keyakinan kepada Dhamma. Saṅgha adalah ladang yang terbaik dari yang baik, Yang telah melihat kedamaian, seorang bijak yang berjalan dengan baik, Yang bijak, yang mulia, yang telah meninggalkan kelalaian, Aku memuja dengan penuh keyakinan kepada Saṅgha. Dengan pemujaan tertinggi yang kulakukan, Kepada Tiratana yang layak dihormati, Dengan segala jasa kebajikan yang kulakukan, Semoga semua rintangan berakhir. Di sini, seorang Tathāgata muncul di dunia ini sebagai seorang Arahat Sammāsambuddha. Dhamma telah diajarkan yang menuntun pada ketenangan, pencapaian nibbāna, menuju pencerahan, yang telah dinyatakan oleh Sang Buddha. 
 Setelah mendengarkan Dhamma, kita harus memahami bahwa kelahiran adalah penderitaan; penuaan adalah penderitaan; kematian adalah penderitaan; kesedihan, ratapan, kesakitan, kekhawatiran, kekecewaan adalah penderitaan; 
-berkumpul dengan yang tidak disenangi adalah penderitaan; 
-berpisah dengan yang dicintai adalah penderitaan; 
-tidak memperoleh yang diinginkan adalah penderitaan; 
+berkumpul dengan yang tidak disenangi adalah penderitaan;
+berpisah dengan yang dicintai adalah penderitaan;
+tidak memperoleh yang diinginkan adalah penderitaan;
 Singkatnya, lima kelompok kehidupan adalah penderitaan; yaitu kelompok kemelekatan pada jasmani, kelompok kemelekatan pada perasaan, kelompok kemelekatan pada pencerapan, kelompok kemelekatan pada bentuk-bentuk pikiran, kelompok kemelekatan pada kesadaran. Supaya sepenuhnya memahami hal ini, saat Sang Bhagavā masih hidup, Beliau sering menganjurkan para siswaNya untuk merenungkan bahwa jasmani adalah tidak kekal, perasaan adalah tidak kekal, pencerapan adalah tidak kekal, bentuk-bentuk pikiran adalah tidak kekal, kesadaran adalah tidak kekal; jasmani bukan aku, perasaan bukan aku, pencerapan bukan aku, bentukbentuk pikiran bukan aku, kesadaran bukan aku. Semua yang berkondisi adalah tidak kekal, segala sesuatu bukan aku. Kita semua tidak terlepas dari kelahiran, penuaan, kematian, kesedihan, ratapan, kesakitan, kekhawatiran, kekecewaan, tidak terlepas dari penderitaan, dibelenggu oleh penderitaan. Ketahuilah bahwa semua kelompok penderitaan dapat diakhiri.
 Walaupun Sang Bhagavā, Arahat Sammāsamuddha telah lama parinibbāna, dengan keyakinan melakukan pelepasan, menempuh kehidupan tanpa rumah, melaksanakan kehidupan suci ini. Penuh berkah pelatihan sebagai seorang bhikkhu (sāmaṇera). Semoga dengan kehidupan suci ini, semoga kelompok penderitaan ini dapat diakhiri secara penuh. Catatan. Bagi umat, bait terakhir diganti menjadi: Walaupun Sang Bhagavā telah lama parinibbāna, kepada Bhagavā kami pergi (berlindung), dan kepada Dhamma dan Bhikkhu Saṅgha, mempraktikkan ajaran Sang Bhagava, dengan penuh semangat dan perhatian, berusaha semampu kami, semoga kelompok penderitaan ini dapat
 diakhiri secara penuh. `
-    },
-    {
-        title: 'ABHIṆHAPPACCAVEKKHAṆAPĀṬHO',
-        duration: '4:20',
-        description: 'Perenungan',
-        audioUrl: '#',
-        paliText: `Handa mayaṁ abhiṇhappaccavekkhanapāthaṁ
+        },
+        {
+                title: 'ABHIṆHAPPACCAVEKKHAṆAPĀṬHO',
+                duration: '4:20',
+                description: 'Perenungan',
+                audioUrl: '#',
+                paliText: `Handa mayaṁ abhiṇhappaccavekkhanapāthaṁ
 bhaṇāma se
 
 Jarādhammomhi,
@@ -226,7 +221,7 @@ Yaṁ kammaṁ karissāmi,
 kalyāṇaṁ vā pāpakaṁ vā,
 Tassa dāyādo bhavissāmī.
 Evaṁ amhehi abhiṇhaṁ paccavekkhitabbaṁ.`,
-        translation: `Marilah kita membacakan perenungan yang patut
+                translation: `Marilah kita membacakan perenungan yang patut
 direnungkan secara terus-menerus
 
 Aku akan mengalami penuaan,
@@ -245,13 +240,13 @@ Terlindung oleh perbuatanku sendiri,
 Apapun perbuatan yang kuperbuat, baik atau buruk itulah
 yang akan kuwarisi.
 Hendaklah setiap saat direnungkan.`
-    },
-    {
-        title: 'UDDISANADHITTHĀNA GĀTHĀ',
-        duration: '4:20',
-        description: 'Pelimpahan Jasa',
-        audioUrl: '#',
-        paliText: `Handa mayaṁ uddisanadhitthāna gāthāyo bhaṇāma
+        },
+        {
+                title: 'UDDISANADHITTHĀNA GĀTHĀ',
+                duration: '4:20',
+                description: 'Pelimpahan Jasa',
+                audioUrl: '#',
+                paliText: `Handa mayaṁ uddisanadhitthāna gāthāyo bhaṇāma
 se
 
 Iminā puññakammena
@@ -286,7 +281,7 @@ Nātho paccekabuddho ca
 Saṅgho nāthottaro mamaṁ
 Tesottamānubhāvena
 Mārokāsaṁ labhantu mā`,
-        translation: `Marilah kita membacakan syair untuk tekad pelimpahan
+                translation: `Marilah kita membacakan syair untuk tekad pelimpahan
 jasa
 
 Ku persembahkan kebajikan yang telah ku lakukan untuk
@@ -322,5 +317,5 @@ Dengan kekuatan perlindungan ini
 Semoga kami dapat segera terlepas dari gangguan Māra.
 * Pembacaan Uddisanadhitthāna Gāthā dapat diganti
 dengan membacakan Devatādipattidāna Gāthā`
-    }
+        }
 ];

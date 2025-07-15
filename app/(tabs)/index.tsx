@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { BackHandler, SafeAreaView, ScrollView, View } from 'react-native';
+import { BackHandler, ScrollView, View } from 'react-native';
 import Navbar from '../../components/Navbar';
 import Dashboard from './Dashboard';
 import HeroSection from './HeroSection';
@@ -23,15 +23,12 @@ const App: React.FC = () => {
   useEffect(() => {
     const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
       if (activeSection !== 'Dashboard') {
-        // Jika tidak di Dashboard, kembali ke Dashboard
         setActiveSection('Dashboard');
-        return true; // Mencegah default behavior (menutup aplikasi)
+        return true;
       }
-      // Jika sudah di Dashboard, biarkan aplikasi tertutup (return false)
       return false;
     });
 
-    // Cleanup listener ketika component unmount
     return () => backHandler.remove();
   }, [activeSection]);
 
@@ -61,18 +58,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-50">
-      {/* Fixed Navbar - tidak akan ikut scroll */}
-      <View className="relative z-50">
-        <Navbar
-          activeSection={activeSection}
-          isMobileMenuOpen={isMobileMenuOpen}
-          setIsMobileMenuOpen={setIsMobileMenuOpen}
-          setActiveSection={setActiveSection}
-        />
-      </View>
+    <View className="flex-1 bg-white">
+      {/* Navbar - Removed mt-8 */}
+      <Navbar
+        activeSection={activeSection}
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+        setActiveSection={setActiveSection}
+      />
       
-      {/* Scrollable Content Area */}
+      {/* Scrollable Content */}
       <ScrollView 
         ref={scrollViewRef}
         className="flex-1 bg-gray-50"
@@ -81,7 +76,7 @@ const App: React.FC = () => {
       >
         {renderContent()}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
