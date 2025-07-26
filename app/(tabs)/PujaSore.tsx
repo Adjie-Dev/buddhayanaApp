@@ -68,7 +68,7 @@ const Pujasore = () => {
 
             <View className="flex-row items-center justify-center bg-amber-100 px-3 py-2 rounded-full">
             <FontAwesome5 name="clock" size={12} color="#92400e" style={{ marginRight: 6 }} />
-            <Text className="text-amber-800 text-sm">Waktu Terbaik: 05:00 - 07:00 WIB</Text>
+            <Text className="text-amber-800 text-sm">Waktu Terbaik: 15:00 - 17:00 WIB</Text>
             </View>
         </View>
 

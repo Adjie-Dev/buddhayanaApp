@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import Dashboard from './Dashboard';
 import HeroSection from './HeroSection';
 import Meditasi from './Meditasi';
+import Panduan from './Panduan';
 import PujapagiScreen from './PujaPagi';
 import Pujasore from './PujaSore';
 
@@ -47,6 +48,8 @@ const App: React.FC = () => {
         return <Pujasore />;
       case 'Meditasi':
         return <Meditasi />;
+        case 'Panduan':
+          return <Panduan setActiveSection={setActiveSection} />;
       default:
         return (
           <>
@@ -59,16 +62,16 @@ const App: React.FC = () => {
 
   return (
     <View className="flex-1 bg-white">
-      {/* Navbar - Removed mt-8 */}
+      {/* Fixed Navbar - PINDAH KE LUAR ScrollView */}
       <Navbar
         activeSection={activeSection}
         isMobileMenuOpen={isMobileMenuOpen}
         setIsMobileMenuOpen={setIsMobileMenuOpen}
         setActiveSection={setActiveSection}
       />
-      
-      {/* Scrollable Content */}
-      <ScrollView 
+
+      {/* Scrollable Content - Navbar sekarang FIXED di atas */}
+      <ScrollView
         ref={scrollViewRef}
         className="flex-1 bg-gray-50"
         showsVerticalScrollIndicator={false}

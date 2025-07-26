@@ -63,25 +63,43 @@ const Navbar: React.FC<NavbarProps> = ({
         setIsMobileMenuOpen(false);
     };
 
+    // Get status bar height safely
+    const getStatusBarHeight = () => {
+        return StatusBar.currentHeight || 0;
+    };
+
     return (
         <>
             {/* Status Bar Configuration */}
             <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
             
-            {/* Header dengan styling normal - Fixed positioning */}
-            <View className="bg-white shadow-lg" style={{ paddingTop: StatusBar.currentHeight || 44 }}>
+            {/* Header dengan styling yang diperbaiki */}
+            <View 
+                className="bg-white shadow-lg relative z-10" 
+                style={{ 
+                    paddingTop: getStatusBarHeight(),
+                    elevation: 8, // Tambahkan elevation untuk Android
+                    shadowColor: '#000', // Shadow untuk iOS
+                    shadowOffset: { width: 0, height: 2 },
+                    shadowOpacity: 0.1,
+                    shadowRadius: 3.84,
+                }}
+            >
                 <View className="flex-row items-center justify-between px-4 py-3">
                     {/* Logo */}
-                    <View className="flex-row items-center">
+                    <View className="flex-row items-center flex-1">
                         <MaterialCommunityIcons name="dharmachakra" size={28} color="#ea580c" />
-                        <Text className="text-xl font-bold text-gray-800 ml-2">Buddhayana Digital</Text>
+                        <Text className="text-xl font-bold text-gray-800 ml-2" numberOfLines={1}>
+                            Buddhayana Digital
+                        </Text>
                     </View>
                     
                     {/* Hamburger Menu Button */}
                     <TouchableOpacity
                         onPress={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="p-2"
+                        className="p-2 rounded-lg"
                         activeOpacity={0.7}
+                        style={{ minWidth: 40, minHeight: 40 }} // Ensure minimum touch area
                     >
                         <MaterialCommunityIcons 
                             name={isMobileMenuOpen ? 'close' : 'menu'} 
@@ -124,16 +142,21 @@ const Navbar: React.FC<NavbarProps> = ({
                         style={{
                             width: SIDEBAR_WIDTH,
                             transform: [{ translateX: slideAnim }],
-                            paddingTop: StatusBar.currentHeight || 44
+                            paddingTop: getStatusBarHeight()
                         }}
                     >
                         {/* Sidebar Header */}
                         <View className="flex-row items-center justify-between px-4 py-6 border-b border-gray-200">
-                            <View className="flex-row items-center">
+                            <View className="flex-row items-center flex-1">
                                 <MaterialCommunityIcons name="dharmachakra" size={24} color="#ea580c" />
-                                <Text className="text-lg font-bold text-gray-800 ml-2">Buddhayana Digital</Text>
+                                <Text className="text-lg font-bold text-gray-800 ml-2" numberOfLines={1}>
+                                    Buddhayana Digital
+                                </Text>
                             </View>
-                            <TouchableOpacity onPress={() => setIsMobileMenuOpen(false)}>
+                            <TouchableOpacity 
+                                onPress={() => setIsMobileMenuOpen(false)}
+                                className="p-1"
+                            >
                                 <MaterialCommunityIcons name="close" size={24} color="#6b7280" />
                             </TouchableOpacity>
                         </View>

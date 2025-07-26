@@ -1,26 +1,35 @@
 import React from 'react';
-import { Dimensions, ImageBackground, Text, TouchableOpacity, View } from 'react-native';
+import { ImageBackground, Text, TouchableOpacity, View } from 'react-native';
 
 interface HeroSectionProps {
   setActiveSection: (section: string) => void;
 }
 
 const HeroSection = ({ setActiveSection }: HeroSectionProps) => {
-  const screenHeight = Dimensions.get('window').height
+  // const screenHeight = Dimensions.get('window').height
 
   const handleMulaiPuja = () => {
-    const currentHour = new Date().getHours()
+    const now = new Date()
+    const currentHour = now.getHours()
+    console.log('Full date:', now.toString())
     console.log('Current hour:', currentHour)
-    
-    // Jam 1 pagi (01:00) sampai jam 12 siang (12:00) = Puja Pagi
-    // Jam 1 siang (13:00) sampai jam 12 malam (00:00) = Puja Sore
-    if (currentHour >= 1 && currentHour <= 12) {
+    console.log('Hour >= 0:', currentHour >= 0)
+    console.log('Hour <= 11:', currentHour <= 11)
+    console.log('Condition result:', currentHour >= 0 && currentHour <= 11)
+
+    // Jam 00:00 sampai sebelum jam 12:00 siang = Puja Pagi
+    // Jam 12:00 siang sampai jam 23:59 = Puja Sore
+    if (currentHour >= 0 && currentHour <= 11) {
       console.log('Navigating to puja pagi')
       setActiveSection('PujaPagi')
     } else {
       console.log('Navigating to puja sore')
       setActiveSection('PujaSore')
     }
+  }
+
+  const handleLihatPanduan = () => {
+    setActiveSection('Panduan')
   }
 
   return (
@@ -42,13 +51,16 @@ const HeroSection = ({ setActiveSection }: HeroSectionProps) => {
             Platform edukasi Buddhist untuk memperdalam praktik spiritual Anda melalui puja, meditasi, dan pembelajaran Dharma
           </Text>
           <View className="flex-row flex-wrap justify-center gap-4">
-            <TouchableOpacity 
+            <TouchableOpacity
               className="bg-white px-8 py-3 rounded-lg shadow"
               onPress={handleMulaiPuja}
             >
               <Text className="text-orange-600 font-semibold text-center">Mulai Puja</Text>
             </TouchableOpacity>
-            <TouchableOpacity className="border-2 border-white px-8 py-3 rounded-lg">
+            <TouchableOpacity
+              className="border-2 border-white px-8 py-3 rounded-lg"
+              onPress={handleLihatPanduan}
+            >
               <Text className="text-white font-semibold text-center">Lihat Panduan</Text>
             </TouchableOpacity>
           </View>

@@ -2,7 +2,7 @@
   "expo": {
     "name": "buddhayana-app",
     "slug": "buddhayana-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/buddhayana.png",
     "scheme": "buddhayana-app",
@@ -21,7 +21,7 @@
       },
       "edgeToEdgeEnabled": true,
       "package": "com.wahyuaji.buddhayanaapp",
-      "runtimeVersion": "1.0.0"
+      "runtimeVersion": "1.0.1"
     },
     "web": {
       "bundler": "metro",
