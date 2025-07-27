@@ -63,11 +63,6 @@ const Navbar: React.FC<NavbarProps> = ({
         setIsMobileMenuOpen(false);
     };
 
-    // Get status bar height safely
-    const getStatusBarHeight = () => {
-        return StatusBar.currentHeight || 0;
-    };
-
     return (
         <>
             {/* Status Bar Configuration */}
@@ -77,9 +72,9 @@ const Navbar: React.FC<NavbarProps> = ({
             <View 
                 className="bg-white shadow-lg relative z-10" 
                 style={{ 
-                    paddingTop: getStatusBarHeight(),
-                    elevation: 8, // Tambahkan elevation untuk Android
-                    shadowColor: '#000', // Shadow untuk iOS
+                    // paddingTop: 20,
+                    elevation: 8,
+                    shadowColor: '#000',
                     shadowOffset: { width: 0, height: 2 },
                     shadowOpacity: 0.1,
                     shadowRadius: 3.84,
@@ -99,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({
                         onPress={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="p-2 rounded-lg"
                         activeOpacity={0.7}
-                        style={{ minWidth: 40, minHeight: 40 }} // Ensure minimum touch area
+                        style={{ minWidth: 40, minHeight: 40 }}
                     >
                         <MaterialCommunityIcons 
                             name={isMobileMenuOpen ? 'close' : 'menu'} 
@@ -142,7 +137,7 @@ const Navbar: React.FC<NavbarProps> = ({
                         style={{
                             width: SIDEBAR_WIDTH,
                             transform: [{ translateX: slideAnim }],
-                            paddingTop: getStatusBarHeight()
+                            paddingTop: 20
                         }}
                     >
                         {/* Sidebar Header */}
